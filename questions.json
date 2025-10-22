@@ -1,0 +1,362 @@
+[
+  {
+    "id": 1,
+    "question": "¿Qué imprime: print(type([1, 2, 3]))?",
+    "options": [
+      "<class 'tuple'>",
+      "<class 'list'>",
+      "<class 'set'>",
+      "<class 'dict'>"
+    ],
+    "answer_index": 1,
+    "explanation": "Las listas usan corchetes []."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es el resultado de 10 // 3?",
+    "options": [
+      "3",
+      "3.33",
+      "4",
+      "Error"
+    ],
+    "answer_index": 0,
+    "explanation": "// realiza división entera (floor division)."
+  },
+  {
+    "id": 3,
+    "question": "¿Qué palabra clave se usa para definir una función en Python?",
+    "options": [
+      "func",
+      "def",
+      "function",
+      "lambda"
+    ],
+    "answer_index": 1,
+    "explanation": "Las funciones se definen con la palabra clave 'def'."
+  },
+  {
+    "id": 4,
+    "question": "¿Cuál de los siguientes NO es un tipo de colección mutable?",
+    "options": [
+      "list",
+      "dict",
+      "tuple",
+      "set"
+    ],
+    "answer_index": 2,
+    "explanation": "Las tuplas son inmutables."
+  },
+  {
+    "id": 5,
+    "question": "¿Qué imprime: print('Hola' + ' ' + 'Mundo')?",
+    "options": [
+      "Hola Mundo",
+      "HolaMundo",
+      "Error",
+      "['Hola', 'Mundo']"
+    ],
+    "answer_index": 0,
+    "explanation": "El operador + concatena cadenas."
+  },
+  {
+    "id": 6,
+    "question": "¿Qué operador se usa para comprobar igualdad en Python?",
+    "options": [
+      "=",
+      "==",
+      "===",
+      "!="
+    ],
+    "answer_index": 1,
+    "explanation": "== compara valores, = asigna."
+  },
+  {
+    "id": 7,
+    "question": "¿Qué función devuelve la longitud de una lista?",
+    "options": [
+      "size()",
+      "len()",
+      "count()",
+      "length()"
+    ],
+    "answer_index": 1,
+    "explanation": "len() devuelve el número de elementos."
+  },
+  {
+    "id": 8,
+    "question": "¿Qué imprime: print(bool(0))?",
+    "options": [
+      "True",
+      "False",
+      "0",
+      "Error"
+    ],
+    "answer_index": 1,
+    "explanation": "El 0 es considerado False."
+  },
+  {
+    "id": 9,
+    "question": "¿Qué estructura de control se usa para manejar excepciones?",
+    "options": [
+      "try/except",
+      "catch/throw",
+      "error/handle",
+      "begin/rescue"
+    ],
+    "answer_index": 0,
+    "explanation": "El bloque try/except maneja excepciones."
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál es el resultado de: 2 ** 3?",
+    "options": [
+      "6",
+      "8",
+      "9",
+      "Error"
+    ],
+    "answer_index": 1,
+    "explanation": "** es el operador de potencia."
+  },
+  {
+    "id": 11,
+    "question": "¿Qué módulo se usa para obtener información del sistema operativo?",
+    "options": [
+      "os",
+      "system",
+      "platform",
+      "sysinfo"
+    ],
+    "answer_index": 2,
+    "explanation": "El módulo platform permite consultar detalles del sistema como el procesador, sistema operativo y versión de Python."
+  },
+  {
+    "id": 12,
+    "question": "¿Qué función del módulo math redondea un número hacia arriba?",
+    "options": [
+      "round()",
+      "ceil()",
+      "floor()",
+      "truncate()"
+    ],
+    "answer_index": 1,
+    "explanation": "math.ceil() redondea siempre al entero superior más cercano."
+  },
+  {
+    "id": 13,
+    "question": "¿Cuál es la función correcta para generar un número aleatorio entre 0 y 1?",
+    "options": [
+      "random()",
+      "rand()",
+      "random.int()",
+      "choice()"
+    ],
+    "answer_index": 0,
+    "explanation": "random.random() devuelve un número flotante aleatorio entre 0.0 y 1.0."
+  },
+  {
+    "id": 14,
+    "question": "¿Qué imprime: print(__name__) en un archivo ejecutado directamente?",
+    "options": [
+      "'__main__'",
+      "'__name__'",
+      "'main'",
+      "'file'"
+    ],
+    "answer_index": 0,
+    "explanation": "Cuando un archivo Python se ejecuta directamente, el valor de __name__ es '__main__'."
+  },
+  {
+    "id": 15,
+    "question": "¿Qué hace la instrucción 'from math import sqrt'?",
+    "options": [
+      "Importa todo el módulo math con un alias llamado sqrt",
+      "Importa solo la función sqrt del módulo math",
+      "Crea una nueva función llamada sqrt",
+      "Importa el módulo math como sqrt"
+    ],
+    "answer_index": 1,
+    "explanation": "La sintaxis 'from math import sqrt' importa únicamente la función sqrt del módulo math."
+  },
+  {
+    "id": 16,
+    "question": "¿Qué función del módulo math se usa para obtener el valor truncado de un número decimal?",
+    "options": [
+      "floor()",
+      "trunc()",
+      "round()",
+      "ceil()"
+    ],
+    "answer_index": 1,
+    "explanation": "math.trunc() elimina la parte decimal sin redondear, devolviendo solo la parte entera."
+  },
+  {
+    "id": 17,
+    "question": "¿Qué hace el módulo random.choice()?",
+    "options": [
+      "Elige un número entero aleatorio",
+      "Elige un elemento al azar de una secuencia",
+      "Ordena aleatoriamente una lista",
+      "Genera una lista de números aleatorios"
+    ],
+    "answer_index": 1,
+    "explanation": "random.choice() selecciona un elemento aleatorio de una lista o secuencia."
+  },
+  {
+    "id": 18,
+    "question": "¿Para qué se usa la variable sys.path?",
+    "options": [
+      "Para cambiar la versión de Python",
+      "Para agregar rutas donde buscar módulos",
+      "Para imprimir errores del sistema",
+      "Para mostrar los argumentos del sistema"
+    ],
+    "answer_index": 1,
+    "explanation": "sys.path es una lista de rutas donde Python busca módulos al hacer import."
+  },
+  {
+    "id": 19,
+    "question": "¿Qué devuelve dir(math)?",
+    "options": [
+      "Una lista con funciones y variables disponibles en el módulo math",
+      "Una descripción del módulo math",
+      "El tipo del módulo",
+      "Una copia del módulo"
+    ],
+    "answer_index": 0,
+    "explanation": "dir() muestra los nombres definidos en un módulo, clase u objeto, incluyendo funciones y variables."
+  },
+  {
+    "id": 20,
+    "question": "¿Qué hace la instrucción import module as m?",
+    "options": [
+      "Crea una nueva función llamada m",
+      "Renombra un módulo importado como m",
+      "Importa solo funciones que empiezan con m",
+      "No es una instrucción válida"
+    ],
+    "answer_index": 1,
+    "explanation": "El uso de 'as' permite usar un alias para el módulo importado."
+  },
+  {
+    "id": 21,
+    "question": "¿Qué nombre recibe el módulo actual cuando se ejecuta directamente?",
+    "options": [
+      "'main_module'",
+      "'__main__'",
+      "'__file__'",
+      "'current'"
+    ],
+    "answer_index": 1,
+    "explanation": "Cuando un módulo es ejecutado directamente, su nombre es '__main__'."
+  },
+  {
+    "id": 22,
+    "question": "¿Qué archivo indica que una carpeta es un paquete en Python?",
+    "options": [
+      "setup.py",
+      "__pycache__",
+      "__init__.py",
+      "main.py"
+    ],
+    "answer_index": 2,
+    "explanation": "El archivo __init__.py permite que Python reconozca un directorio como un paquete."
+  },
+  {
+    "id": 23,
+    "question": "¿Qué palabra clave se utiliza para lanzar una excepción manualmente?",
+    "options": [
+      "throw",
+      "raise",
+      "assert",
+      "except"
+    ],
+    "answer_index": 1,
+    "explanation": "La instrucción 'raise' se usa para lanzar excepciones manualmente."
+  },
+  {
+    "id": 24,
+    "question": "¿Qué hace la instrucción assert en Python?",
+    "options": [
+      "Lanza una excepción si una condición es falsa",
+      "Evita que se ejecute una línea de código",
+      "Detiene el programa",
+      "Registra errores en un archivo"
+    ],
+    "answer_index": 0,
+    "explanation": "'assert' se usa para verificar que una condición sea verdadera; si no lo es, lanza una excepción AssertionError."
+  },
+  {
+    "id": 25,
+    "question": "¿Qué tipo de excepción se lanza cuando se divide por cero?",
+    "options": [
+      "ValueError",
+      "ZeroDivisionError",
+      "TypeError",
+      "IndexError"
+    ],
+    "answer_index": 1,
+    "explanation": "ZeroDivisionError se lanza cuando se intenta dividir un número por cero."
+  },
+  {
+    "id": 26,
+    "question": "¿Qué imprime el siguiente código: try: 1/0 except ZeroDivisionError: print('Error')?",
+    "options": [
+      "0",
+      "1",
+      "Error",
+      "ZeroDivisionError"
+    ],
+    "answer_index": 2,
+    "explanation": "El bloque try intenta dividir entre cero, lo que lanza ZeroDivisionError y ejecuta el bloque except."
+  },
+  {
+    "id": 27,
+    "question": "¿Qué palabra clave se usa para definir una excepción personalizada?",
+    "options": [
+      "exception",
+      "Error",
+      "class",
+      "define"
+    ],
+    "answer_index": 2,
+    "explanation": "Las excepciones personalizadas se crean como clases que heredan de Exception."
+  },
+  {
+    "id": 28,
+    "question": "¿Cuál es el orden correcto para capturar múltiples excepciones?",
+    "options": [
+      "try-except-except",
+      "try-else-except",
+      "try-finally-except",
+      "try-raise-except"
+    ],
+    "answer_index": 0,
+    "explanation": "Se pueden usar múltiples bloques 'except' después de un bloque 'try'."
+  },
+  {
+    "id": 29,
+    "question": "¿Cuál es la jerarquía base de las excepciones en Python?",
+    "options": [
+      "BaseException",
+      "Exception",
+      "Error",
+      "SystemError"
+    ],
+    "answer_index": 0,
+    "explanation": "Todas las excepciones heredan de la clase base 'BaseException'."
+  },
+  {
+    "id": 30,
+    "question": "¿Qué palabra clave se usa para capturar la excepción en una variable?",
+    "options": [
+      "as",
+      "is",
+      "in",
+      "to"
+    ],
+    "answer_index": 0,
+    "explanation": "Se usa 'except Exception as e' para capturar una excepción en la variable e."
+  }
+]
