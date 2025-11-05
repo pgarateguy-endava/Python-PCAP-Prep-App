@@ -14,8 +14,17 @@ def load_questions(path: Path):
                 raise ValueError("Invalid question: missing 'question', 'options', or 'answer_index'.")
             if not isinstance(q["options"], list) or len(q["options"]) == 0:
                 raise ValueError("Each question must have non-empty 'options'.")
-            if not (0 <= q["answer_index"] < len(q["options"])):
-                raise ValueError("The 'answer_index' is out of range for a question.")
+            
+            # Normalize answer_index to always be a list
+            if isinstance(q["answer_index"], int):
+                q["answer_index"] = [q["answer_index"]]
+            elif not isinstance(q["answer_index"], list):
+                raise ValueError("The 'answer_index' must be an integer or list of integers.")
+            
+            # Validate all indices
+            for idx in q["answer_index"]:
+                if not (0 <= idx < len(q["options"])):
+                    raise ValueError(f"The 'answer_index' {idx} is out of range for a question.")
         return data
     
 ss = st.session_state
@@ -78,11 +87,25 @@ def render_results():
             a = ss.answers[j]
             qq = qs[j]
             st.markdown(f"**{j+1}. {qq['question']}**")
+            
             status = "✔️ Correct" if a["correct"] else ("⏭️ Skipped" if a["chosen"] is None else "❌ Incorrect")
             st.write(status)
-            st.write(f"Correct answer: **{qq['options'][qq['answer_index']]}**")
+            
+            # Show correct answer(s)
+            correct_answers = [qq['options'][idx] for idx in qq['answer_index']]
+            if len(correct_answers) == 1:
+                st.write(f"Correct answer: **{correct_answers[0]}**")
+            else:
+                st.write(f"Correct answers: **{', '.join(correct_answers)}**")
+            
+            # Show user's answer if incorrect
             if a["chosen"] is not None and not a["correct"]:
-                st.write(f"Your answer: {qq['options'][a['chosen']]}")
+                if isinstance(a["chosen"], list):
+                    user_answers = [qq['options'][idx] for idx in a["chosen"]]
+                    st.write(f"Your answers: {', '.join(user_answers)}")
+                else:
+                    st.write(f"Your answer: {qq['options'][a['chosen']]}")
+            
             if "explanation" in qq and qq["explanation"]:
                 st.info(qq["explanation"])
 
@@ -117,23 +140,76 @@ else:
         q = qs[i]
         st.progress(i/max(total, 1))
         st.subheader(f"Question {i+1} of {total}")
-        st.write(q["question"])
+        
+        # Display question with proper code formatting
+        question_lines = q["question"].split('\n')
+        question_text = []
+        code_block = []
+        in_code = False
+        
+        for line in question_lines:
+            # Detect if line looks like code
+            if line.strip() and (
+                line.startswith(('def ', 'class ', 'import ', 'from ', 'for ', 'while ', 'if ', 'try:', 'except', 'print(')) or
+                '=' in line or line.strip().startswith(('    ', '\t'))
+            ):
+                if not in_code and question_text:
+                    st.write(' '.join(question_text))
+                    question_text = []
+                in_code = True
+                code_block.append(line)
+            else:
+                if in_code and code_block:
+                    st.code('\n'.join(code_block), language='python')
+                    code_block = []
+                    in_code = False
+                if line.strip():
+                    question_text.append(line)
+        
+        # Display remaining content
+        if question_text:
+            st.write(' '.join(question_text))
+        if code_block:
+            st.code('\n'.join(code_block), language='python')
 
-        choice = st.radio("Choose an option:", q["options"], index=None, key=f"choice_{i}")
+        # Determine if this is a multi-answer question
+        is_multi = len(q["answer_index"]) > 1
+        
+        if is_multi:
+            st.info(f"📝 Select {len(q['answer_index'])} answers")
+            choices = []
+            for idx, option in enumerate(q["options"]):
+                if st.checkbox(option, key=f"choice_{i}_{idx}"):
+                    choices.append(idx)
+        else:
+            choice = st.radio("Choose an option:", q["options"], index=None, key=f"choice_{i}")
+            choices = [q["options"].index(choice)] if choice is not None else None
 
         cols = st.columns(2)
         with cols[0]:
             if st.button("⏭️ Skip", use_container_width=True):
-                ss.answers.append({"id": q.get("id"), "chosen": None, "correct": False, "correct_index": q["answer_index"]})
+                ss.answers.append({
+                    "id": q.get("id"), 
+                    "chosen": None, 
+                    "correct": False, 
+                    "correct_index": q["answer_index"]
+                })
                 ss.index += 1
                 st.rerun()
         with cols[1]:
-            if st.button("Answer ✅", use_container_width=True, disabled=(choice is None)):
-                chosen_idx = q["options"].index(choice) if choice is not None else None
-                correct = (chosen_idx == q["answer_index"])
+            if st.button("Answer ✅", use_container_width=True, disabled=(choices is None or len(choices) == 0)):
+                # Check if answer is correct
+                correct = set(choices) == set(q["answer_index"]) if choices else False
+                
                 if correct:
                     ss.score += 1
-                ss.answers.append({"id": q.get("id"), "chosen": chosen_idx, "correct": correct, "correct_index": q["answer_index"]})
+                
+                ss.answers.append({
+                    "id": q.get("id"), 
+                    "chosen": choices if is_multi else (choices[0] if choices else None), 
+                    "correct": correct, 
+                    "correct_index": q["answer_index"]
+                })
                 ss.index += 1
                 st.rerun()
 

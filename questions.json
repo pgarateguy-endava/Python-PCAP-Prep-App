@@ -1,362 +1,724 @@
 [
-  {
-    "id": 1,
-    "question": "¿Qué imprime: print(type([1, 2, 3]))?",
-    "options": [
-      "<class 'tuple'>",
-      "<class 'list'>",
-      "<class 'set'>",
-      "<class 'dict'>"
-    ],
-    "answer_index": 1,
-    "explanation": "Las listas usan corchetes []."
-  },
-  {
-    "id": 2,
-    "question": "¿Cuál es el resultado de 10 // 3?",
-    "options": [
-      "3",
-      "3.33",
-      "4",
-      "Error"
-    ],
-    "answer_index": 0,
-    "explanation": "// realiza división entera (floor division)."
-  },
-  {
-    "id": 3,
-    "question": "¿Qué palabra clave se usa para definir una función en Python?",
-    "options": [
-      "func",
-      "def",
-      "function",
-      "lambda"
-    ],
-    "answer_index": 1,
-    "explanation": "Las funciones se definen con la palabra clave 'def'."
-  },
-  {
-    "id": 4,
-    "question": "¿Cuál de los siguientes NO es un tipo de colección mutable?",
-    "options": [
-      "list",
-      "dict",
-      "tuple",
-      "set"
-    ],
-    "answer_index": 2,
-    "explanation": "Las tuplas son inmutables."
-  },
-  {
-    "id": 5,
-    "question": "¿Qué imprime: print('Hola' + ' ' + 'Mundo')?",
-    "options": [
-      "Hola Mundo",
-      "HolaMundo",
-      "Error",
-      "['Hola', 'Mundo']"
-    ],
-    "answer_index": 0,
-    "explanation": "El operador + concatena cadenas."
-  },
-  {
-    "id": 6,
-    "question": "¿Qué operador se usa para comprobar igualdad en Python?",
-    "options": [
-      "=",
-      "==",
-      "===",
-      "!="
-    ],
-    "answer_index": 1,
-    "explanation": "== compara valores, = asigna."
-  },
-  {
-    "id": 7,
-    "question": "¿Qué función devuelve la longitud de una lista?",
-    "options": [
-      "size()",
-      "len()",
-      "count()",
-      "length()"
-    ],
-    "answer_index": 1,
-    "explanation": "len() devuelve el número de elementos."
-  },
-  {
-    "id": 8,
-    "question": "¿Qué imprime: print(bool(0))?",
-    "options": [
-      "True",
-      "False",
-      "0",
-      "Error"
-    ],
-    "answer_index": 1,
-    "explanation": "El 0 es considerado False."
-  },
-  {
-    "id": 9,
-    "question": "¿Qué estructura de control se usa para manejar excepciones?",
-    "options": [
-      "try/except",
-      "catch/throw",
-      "error/handle",
-      "begin/rescue"
-    ],
-    "answer_index": 0,
-    "explanation": "El bloque try/except maneja excepciones."
-  },
-  {
-    "id": 10,
-    "question": "¿Cuál es el resultado de: 2 ** 3?",
-    "options": [
-      "6",
-      "8",
-      "9",
-      "Error"
-    ],
-    "answer_index": 1,
-    "explanation": "** es el operador de potencia."
-  },
-  {
-    "id": 11,
-    "question": "¿Qué módulo se usa para obtener información del sistema operativo?",
-    "options": [
-      "os",
-      "system",
-      "platform",
-      "sysinfo"
-    ],
-    "answer_index": 2,
-    "explanation": "El módulo platform permite consultar detalles del sistema como el procesador, sistema operativo y versión de Python."
-  },
-  {
-    "id": 12,
-    "question": "¿Qué función del módulo math redondea un número hacia arriba?",
-    "options": [
-      "round()",
-      "ceil()",
-      "floor()",
-      "truncate()"
-    ],
-    "answer_index": 1,
-    "explanation": "math.ceil() redondea siempre al entero superior más cercano."
-  },
-  {
-    "id": 13,
-    "question": "¿Cuál es la función correcta para generar un número aleatorio entre 0 y 1?",
-    "options": [
-      "random()",
-      "rand()",
-      "random.int()",
-      "choice()"
-    ],
-    "answer_index": 0,
-    "explanation": "random.random() devuelve un número flotante aleatorio entre 0.0 y 1.0."
-  },
-  {
-    "id": 14,
-    "question": "¿Qué imprime: print(__name__) en un archivo ejecutado directamente?",
-    "options": [
-      "'__main__'",
-      "'__name__'",
-      "'main'",
-      "'file'"
-    ],
-    "answer_index": 0,
-    "explanation": "Cuando un archivo Python se ejecuta directamente, el valor de __name__ es '__main__'."
-  },
-  {
-    "id": 15,
-    "question": "¿Qué hace la instrucción 'from math import sqrt'?",
-    "options": [
-      "Importa todo el módulo math con un alias llamado sqrt",
-      "Importa solo la función sqrt del módulo math",
-      "Crea una nueva función llamada sqrt",
-      "Importa el módulo math como sqrt"
-    ],
-    "answer_index": 1,
-    "explanation": "La sintaxis 'from math import sqrt' importa únicamente la función sqrt del módulo math."
-  },
-  {
-    "id": 16,
-    "question": "¿Qué función del módulo math se usa para obtener el valor truncado de un número decimal?",
-    "options": [
-      "floor()",
-      "trunc()",
-      "round()",
-      "ceil()"
-    ],
-    "answer_index": 1,
-    "explanation": "math.trunc() elimina la parte decimal sin redondear, devolviendo solo la parte entera."
-  },
-  {
-    "id": 17,
-    "question": "¿Qué hace el módulo random.choice()?",
-    "options": [
-      "Elige un número entero aleatorio",
-      "Elige un elemento al azar de una secuencia",
-      "Ordena aleatoriamente una lista",
-      "Genera una lista de números aleatorios"
-    ],
-    "answer_index": 1,
-    "explanation": "random.choice() selecciona un elemento aleatorio de una lista o secuencia."
-  },
-  {
-    "id": 18,
-    "question": "¿Para qué se usa la variable sys.path?",
-    "options": [
-      "Para cambiar la versión de Python",
-      "Para agregar rutas donde buscar módulos",
-      "Para imprimir errores del sistema",
-      "Para mostrar los argumentos del sistema"
-    ],
-    "answer_index": 1,
-    "explanation": "sys.path es una lista de rutas donde Python busca módulos al hacer import."
-  },
-  {
-    "id": 19,
-    "question": "¿Qué devuelve dir(math)?",
-    "options": [
-      "Una lista con funciones y variables disponibles en el módulo math",
-      "Una descripción del módulo math",
-      "El tipo del módulo",
-      "Una copia del módulo"
-    ],
-    "answer_index": 0,
-    "explanation": "dir() muestra los nombres definidos en un módulo, clase u objeto, incluyendo funciones y variables."
-  },
-  {
-    "id": 20,
-    "question": "¿Qué hace la instrucción import module as m?",
-    "options": [
-      "Crea una nueva función llamada m",
-      "Renombra un módulo importado como m",
-      "Importa solo funciones que empiezan con m",
-      "No es una instrucción válida"
-    ],
-    "answer_index": 1,
-    "explanation": "El uso de 'as' permite usar un alias para el módulo importado."
-  },
-  {
-    "id": 21,
-    "question": "¿Qué nombre recibe el módulo actual cuando se ejecuta directamente?",
-    "options": [
-      "'main_module'",
-      "'__main__'",
-      "'__file__'",
-      "'current'"
-    ],
-    "answer_index": 1,
-    "explanation": "Cuando un módulo es ejecutado directamente, su nombre es '__main__'."
-  },
-  {
-    "id": 22,
-    "question": "¿Qué archivo indica que una carpeta es un paquete en Python?",
-    "options": [
-      "setup.py",
-      "__pycache__",
-      "__init__.py",
-      "main.py"
-    ],
-    "answer_index": 2,
-    "explanation": "El archivo __init__.py permite que Python reconozca un directorio como un paquete."
-  },
-  {
-    "id": 23,
-    "question": "¿Qué palabra clave se utiliza para lanzar una excepción manualmente?",
-    "options": [
-      "throw",
-      "raise",
-      "assert",
-      "except"
-    ],
-    "answer_index": 1,
-    "explanation": "La instrucción 'raise' se usa para lanzar excepciones manualmente."
-  },
-  {
-    "id": 24,
-    "question": "¿Qué hace la instrucción assert en Python?",
-    "options": [
-      "Lanza una excepción si una condición es falsa",
-      "Evita que se ejecute una línea de código",
-      "Detiene el programa",
-      "Registra errores en un archivo"
-    ],
-    "answer_index": 0,
-    "explanation": "'assert' se usa para verificar que una condición sea verdadera; si no lo es, lanza una excepción AssertionError."
-  },
-  {
-    "id": 25,
-    "question": "¿Qué tipo de excepción se lanza cuando se divide por cero?",
-    "options": [
-      "ValueError",
-      "ZeroDivisionError",
-      "TypeError",
-      "IndexError"
-    ],
-    "answer_index": 1,
-    "explanation": "ZeroDivisionError se lanza cuando se intenta dividir un número por cero."
-  },
-  {
-    "id": 26,
-    "question": "¿Qué imprime el siguiente código: try: 1/0 except ZeroDivisionError: print('Error')?",
-    "options": [
-      "0",
-      "1",
-      "Error",
-      "ZeroDivisionError"
-    ],
-    "answer_index": 2,
-    "explanation": "El bloque try intenta dividir entre cero, lo que lanza ZeroDivisionError y ejecuta el bloque except."
-  },
-  {
-    "id": 27,
-    "question": "¿Qué palabra clave se usa para definir una excepción personalizada?",
-    "options": [
-      "exception",
-      "Error",
-      "class",
-      "define"
-    ],
-    "answer_index": 2,
-    "explanation": "Las excepciones personalizadas se crean como clases que heredan de Exception."
-  },
-  {
-    "id": 28,
-    "question": "¿Cuál es el orden correcto para capturar múltiples excepciones?",
-    "options": [
-      "try-except-except",
-      "try-else-except",
-      "try-finally-except",
-      "try-raise-except"
-    ],
-    "answer_index": 0,
-    "explanation": "Se pueden usar múltiples bloques 'except' después de un bloque 'try'."
-  },
-  {
-    "id": 29,
-    "question": "¿Cuál es la jerarquía base de las excepciones en Python?",
-    "options": [
-      "BaseException",
-      "Exception",
-      "Error",
-      "SystemError"
-    ],
-    "answer_index": 0,
-    "explanation": "Todas las excepciones heredan de la clase base 'BaseException'."
-  },
-  {
-    "id": 30,
-    "question": "¿Qué palabra clave se usa para capturar la excepción en una variable?",
-    "options": [
-      "as",
-      "is",
-      "in",
-      "to"
-    ],
-    "answer_index": 0,
-    "explanation": "Se usa 'except Exception as e' para capturar una excepción en la variable e."
-  }
+{
+  "id": 1,
+  "question": "What is true about the following line of code?\n\nprint(len((1, )))",
+  "options": [
+    "The code will output 1",
+    "The code will output 2",
+    "The code is erroneous",
+    "The code will output 0"
+  ],
+  "answer_index": 0,
+  "explanation": "El código crea una tupla con un solo elemento `(1,)`, por lo tanto su longitud es 1. La función `len()` devuelve 1."
+},
+{
+  "id": 2,
+  "question": "What is the expected output of the following piece of code?\n\nv = 1 + 1 // 2 + 1 / 2 + 2\nprint(v)",
+  "options": [
+    "3",
+    "4",
+    "4.0",
+    "3.5"
+  ],
+  "answer_index": 3,
+  "explanation": "El operador `//` realiza división entera, mientras que `/` realiza división flotante. La precedencia hace que primero se calculen las divisiones: `1 // 2` es 0 y `1 / 2` es 0.5. Así, `v = 1 + 0 + 0.5 + 2 = 3.5`."
+},
+
+{
+  "id": 3,
+  "question": "What is true about the following code snippet?\n\ndef fun(par2, par1):\n    return par2 + par1\n\nprint(fun(par2=1, 2))",
+  "options": [
+    "The code will output 2",
+    "The code will output 1",
+    "The code will output 3",
+    "The code is erroneous"
+  ],
+  "answer_index": 3,
+  "explanation": "El código es erróneo porque en la llamada a la función `fun(par2=1, 2)` se mezcla un argumento con nombre seguido de un argumento posicional, lo cual no está permitido en Python. Los argumentos posicionales deben ir antes de los argumentos nombrados."
+},
+{
+  "id": 4,
+  "question": "If you want to write a byte array's content to a stream, which method can you use?",
+  "options": [
+    "write()",
+    "writefrom()",
+    "writebytearray()",
+    "writeto()"
+  ],
+  "answer_index": 0,
+  "explanation": "El método correcto para escribir el contenido de un arreglo de bytes en un flujo es `write()`. En Python, los objetos de tipo archivo o flujo binario usan `write(data)` para escribir bytes o bytearray en el destino."
+},
+{
+  "id": 5,
+  "question": "Knowing that the function named f() resides in the module named m, and the code contains the following import statement:\n\nfrom f import m\n\nChoose the right way to invoke the function:",
+  "options": [
+    "f()",
+    "The function cannot be invoked because the import statement is invalid",
+    "mod.f()",
+    "m.f()"
+  ],
+  "answer_index": 3,
+  "explanation": "La instrucción `from f import m` importa el módulo `m` desde el paquete `f`. Por lo tanto, para llamar a la función `f()` que está dentro del módulo `m`, se debe usar `m.f()`."
+},
+{
+  "id": 6,
+  "question": "What is the expected behavior of the following snippet?\n\ntry:\n    raise Exception\nexcept:\n    print('c')\nexcept BaseException:\n    print('a')\nexcept Exception:\n    print('b')",
+  "options": [
+    "The code will cause an error",
+    "The code will output a",
+    "The code will output b",
+    "The code will output c"
+  ],
+  "answer_index": 0,
+  "explanation": "El código causa un error de sintaxis. En Python, solo puede haber un bloque `except` genérico sin especificar el tipo de excepción, y debe ir al final. Aquí, el bloque `except:` aparece antes de otros más específicos (`BaseException`, `Exception`), lo que provoca un `SyntaxError` en tiempo de compilación."
+},
+{
+  "id": 7,
+  "question": "What is the expected behavior of the following code?\n\nimport os\n\nos.makedirs('pictures/thumbnails')\nos.rmdir('pictures')",
+  "options": [
+    "The code will delete both the pictures and thumbnails directories",
+    "The code will delete the pictures directory only",
+    "The code will raise an error",
+    "The code will delete the thumbnails directory only"
+  ],
+  "answer_index": 2,
+  "explanation": "El código lanzará un error porque `os.rmdir('pictures')` solo puede eliminar directorios vacíos. Dado que `pictures` contiene el subdirectorio `thumbnails`, no está vacío, por lo tanto se genera una excepción `OSError`."
+},
+{
+  "id": 8,
+  "question": "What is the expected output of the following code, located in the file module.py?\n\nprint(__name__)",
+  "options": [
+    "main",
+    "__module.py__",
+    "module.py",
+    "__main__"
+  ],
+  "answer_index": 3,
+  "explanation": "Cuando un archivo Python se ejecuta directamente, la variable especial `__name__` toma el valor `'__main__'`. Solo cuando se importa como módulo, `__name__` adopta el nombre del módulo, en este caso `'module'`."
+},
+{
+  "id": 9,
+  "question": "Which of the following functions provided by the os module are available in both Windows and Unix? (Select two answers)",
+  "options": [
+    "mkdir()",
+    "chdir()",
+    "getgid()",
+    "getgroups()"
+  ],
+  "answer_index": [0, 1],
+  "explanation": "Las funciones `os.mkdir()` (para crear directorios) y `os.chdir()` (para cambiar el directorio actual de trabajo) están disponibles tanto en Windows como en sistemas Unix. En cambio, `getgid()` y `getgroups()` son específicas de sistemas Unix."
+},
+{
+  "id": 10,
+  "question": "What can you do if you want to tell your module users that a particular variable should not be accessed directly?",
+  "options": [
+    "Start its name with _ or __",
+    "Start its name with a capital letter",
+    "Use its number instead of its name",
+    "Build its name with lowercase letters only"
+  ],
+  "answer_index": 0,
+  "explanation": "En Python, se utiliza un guion bajo inicial (`_variable`) o doble guion bajo (`__variable`) para indicar que una variable o atributo es de uso interno y no debe ser accedido directamente desde fuera del módulo o clase. Es una convención de encapsulamiento, no una restricción estricta del lenguaje."
+},
+{
+  "id": 11,
+  "question": "If there is a finally: branch inside the try: block, we can say that:",
+  "options": [
+    "the finally: branch will always be executed",
+    "the finally: branch won't be executed if no exception is raised",
+    "the finally: branch will be executed when there is no else: branch",
+    "the finally: branch won't be executed if any of the except: branches is executed"
+  ],
+  "answer_index": 0,
+  "explanation": "El bloque `finally` se ejecuta siempre, independientemente de si ocurre o no una excepción. Se usa para ejecutar código de limpieza o cierre de recursos, asegurando que se ejecute incluso si hay un `return` o una excepción no manejada."
+},
+{
+  "id": 12,
+  "question": "What is the expected output of the following piece of code?\n\nx, y, z = 3, 2, 1\nz, y, x = x, y, z\nprint(x, y, z)",
+  "options": [
+    "1 2 2",
+    "1 2 3",
+    "3 2 1",
+    "2 1 3"
+  ],
+  "answer_index": 1,
+  "explanation": "Inicialmente, x=3, y=2, z=1. En la segunda línea, el lado derecho se evalúa con los valores actuales (x=3, y=2, z=1), por lo que se asigna z=3, y=2, x=1. Al imprimir, el resultado es `1 2 3`."
+},
+{
+  "id": 13,
+  "question": "What is the expected output of the following snippet?\n\nd = {}\nd['2'] = [1, 2]\nd['1'] = [3, 4]\n\nfor x in d.keys():\n    print(d[x][1], end=\"\")",
+  "options": [
+    "31",
+    "42",
+    "13",
+    "24"
+  ],
+  "answer_index": 1,
+  "explanation": "El diccionario `d` contiene las claves '2' y '1'. Desde Python 3.7, los diccionarios preservan el orden de inserción, por lo que `d.keys()` devuelve ['2', '1']. En el bucle, `d['2'][1]` es 2 y `d['1'][1]` es 4, por lo que se imprime `24`."
+},
+{
+  "id": 14,
+  "question": "What is the expected output of the following code?\n\nfrom datetime import datetime\n\ndatetime = datetime(2019, 11, 27, 11, 27, 22)\nprint(datetime.strftime('%Y/%m/%d %H:%M:%S'))",
+  "options": [
+    "19/11/27 11:27:22",
+    "2019/11/27 11:27:22",
+    "2019/Nov/27 11:27:22",
+    "2019/November/27 11:27:22"
+  ],
+  "answer_index": 1,
+  "explanation": "El método `strftime('%Y/%m/%d %H:%M:%S')` formatea el objeto datetime usando el año completo (`%Y`), el mes y día con dos dígitos (`%m`, `%d`), y la hora, minutos y segundos (`%H:%M:%S`). Por lo tanto, el resultado es `2019/11/27 11:27:22`."
+},
+{
+  "id": 15,
+  "question": "What is the expected behavior of the following code?\n\nx = \"\\\"\nprint(len(x))",
+  "options": [
+    "The code will output 2",
+    "The code will output 1",
+    "The code will output 3",
+    "The code will cause an error"
+  ],
+  "answer_index": 3,
+  "explanation": "El código causará un error de sintaxis porque la cadena no se cierra correctamente. El carácter de barra invertida (`\\`) escapa a la comilla siguiente, dejando la cadena abierta, lo que genera un `SyntaxError`."
+},
+{
+  "id": 16,
+  "question": "What is the expected output of the following code?\n\nimport calendar\n\nc = calendar.Calendar(calendar.SUNDAY)\n\nfor weekday in c.iterweekdays():\n    print(weekday, end=\" \")",
+  "options": [
+    "6 0 1 2 3 4 5",
+    "Su Mo Tu We Th Fr Sa",
+    "7 1 2 3 4 5 6",
+    "Su"
+  ],
+  "answer_index": 0,
+  "explanation": "El método `iterweekdays()` devuelve los días de la semana como números enteros (lunes=0 a domingo=6), comenzando por el día especificado en `calendar.Calendar()`. Dado que el calendario comienza en `calendar.SUNDAY`, el orden será `6 0 1 2 3 4 5`."
+},
+{
+  "id": 17,
+  "question": "The Exception class contains a property named args — what is it?",
+  "options": [
+    "A string",
+    "A dictionary",
+    "A list",
+    "A tuple"
+  ],
+  "answer_index": 3,
+  "explanation": "La propiedad `args` de la clase `Exception` es una tupla que almacena los argumentos pasados al constructor de la excepción. Por ejemplo, `raise Exception('error', 404)` crea una excepción con `args = ('error', 404)`."
+},
+{
+  "id": 18,
+  "question": "What is the expected result of executing the following code?\n\nclass A:\n    def __init__(self):\n        pass\n\n    def f(self):\n        return 1\n\n    def g():\n        return self.f()\n\na = A()\nprint(a.g())",
+  "options": [
+    "The code will output 0",
+    "The code will output 1",
+    "The code will raise an exception",
+    "The code will output True"
+  ],
+  "answer_index": 2,
+  "explanation": "El código lanzará una excepción porque el método `g()` está definido sin el parámetro `self`, pero se llama como `a.g()`. Python intentará pasar automáticamente la instancia `a` como primer argumento, lo que genera un `TypeError` indicando que `g()` toma 0 argumentos pero 1 fue dado."
+},
+{
+  "id": 19,
+  "question": "What is the expected output of the following snippet?\n\nprint(len([i for i in range(0, -2)]))",
+  "options": [
+    "0",
+    "2",
+    "3",
+    "1"
+  ],
+  "answer_index": 0,
+  "explanation": "La función `range(0, -2)` sin un paso negativo no genera ningún valor, ya que el rango intenta ir desde 0 hasta -2 aumentando (por defecto en +1), lo cual no es posible. Por lo tanto, la lista por comprensión está vacía y su longitud (`len`) es 0."
+},
+{
+  "id": 20,
+  "question": "What is the expected output of the following code?\n\nt = (1, )\nt = t[0] + t[0]\nprint(t)",
+  "options": [
+    "1",
+    "(1,)",
+    "(1, 1)",
+    "2"
+  ],
+  "answer_index": 3,
+  "explanation": "Inicialmente, `t` es una tupla con un solo elemento `(1,)`. Al hacer `t[0] + t[0]`, se realiza una suma entre enteros: `1 + 1 = 2`. Por lo tanto, `t` deja de ser una tupla y pasa a ser un entero con valor `2`."
+},
+{
+  "id": 21,
+  "question": "What is the expected output of the following code?\n\nfrom datetime import timedelta\n\ndelta = timedelta(weeks=1, days=7, hours=11)\nprint(delta)",
+  "options": [
+    "7 days, 11:00:00",
+    "2 weeks, 11:00:00",
+    "1 week, 7 days, 11 hours",
+    "14 days, 11:00:00"
+  ],
+  "answer_index": 3,
+  "explanation": "El argumento `weeks=1` equivale a 7 días, y junto con `days=7`, suman 14 días en total. Además, `hours=11` agrega 11 horas. Por lo tanto, el resultado impreso es `14 days, 11:00:00`."
+},
+{
+  "id": 22,
+  "question": "What is the expected output of the following code?\n\ndef fun(n):\n    s = ''\n    for i in range(n):\n        s += '*'\n        yield s\n\nfor x in fun(3):\n    print(x, end='')",
+  "options": [
+    "2***",
+    "****",
+    "*",
+    "*******"
+  ],
+  "answer_index": 1,
+  "explanation": "La función `fun` es un generador que agrega un `*` en cada iteración. En la primera iteración produce `*`, luego `**` y finalmente `***`. El bucle imprime todas las salidas sin salto de línea, generando `***` como resultado final."
+},
+{
+  "id": 23,
+  "question": "What is the expected behavior of the following piece of code?\n\nx = 16\nwhile x > 0:\n    print('*', end='')\n    x //= 2",
+  "options": [
+    "The code will enter an infinite loop",
+    "The code will output ***",
+    "The code will output *",
+    "The code will output *****"
+  ],
+  "answer_index": 3,
+  "explanation": "El bucle comienza con `x = 16`. En cada iteración, se imprime un `*` y luego `x` se divide entre 2 usando división entera (`//=`). Los valores de `x` serán 16, 8, 4, 2 y 1, resultando en 5 iteraciones. Por lo tanto, el programa imprime `*****`."
+},
+{
+  "id": 24,
+  "question": "What is the expected output of the following code?\n\nmy_string_1 = 'Bond'\nmy_string_2 = 'James Bond'\n\nprint(my_string_1.isalpha(), my_string_2.isalpha())",
+  "options": [
+    "False False",
+    "False True",
+    "True False",
+    "True True"
+  ],
+  "answer_index": 2,
+  "explanation": "El método `isalpha()` devuelve `True` solo si todos los caracteres de la cadena son letras. En `my_string_1 = 'Bond'` todos los caracteres son alfabéticos, por lo tanto devuelve `True`. En cambio, `my_string_2 = 'James Bond'` contiene un espacio, por lo que devuelve `False`."
+},
+{
+  "id": 25,
+  "question": "Which operator would you use to check whether two values are equal?",
+  "options": [
+    "is",
+    "==",
+    "===",
+    "="
+  ],
+  "answer_index": 1,
+  "explanation": "En Python, el operador `==` se utiliza para comparar si dos valores son iguales. El operador `is` compara si dos objetos son el mismo en memoria, mientras que `=` se usa para asignar valores y `===` no existe en Python."
+},
+{
+  "id": 26,
+  "question": "If s is a stream opened in read mode, the following line:\n\nq = s.readlines()\n\nwill assign q as a:",
+  "options": [
+    "list",
+    "string",
+    "dictionary",
+    "tuple"
+  ],
+  "answer_index": 0,
+  "explanation": "El método `readlines()` lee todas las líneas de un archivo y devuelve una lista donde cada elemento corresponde a una línea del archivo, incluyendo los caracteres de nueva línea (`\\n`). Por lo tanto, `q` será una lista."
+},
+{
+  "id": 27,
+  "question": "Which of the following sentences is true about the snippet below?\n\nstr_1 = 'string'\nstr_2 = str_1[:]",
+  "options": [
+    "str_2 is longer than str_1",
+    "str_1 and str_2 are different names of the same string",
+    "str_1 is longer than str_2",
+    "str_1 and str_2 are different (but equal) strings"
+  ],
+  "answer_index": 1,
+  "explanation": "En Python, las cadenas son inmutables. Al hacer `str_2 = str_1[:]`, no se crea una copia nueva, sino que `str_2` apunta al mismo objeto en memoria que `str_1`. Por lo tanto, ambos nombres se refieren a la misma cadena."
+},
+{
+  "id": 28,
+  "question": "What is the expected behavior of the following snippet?\n\nmy_string = 'abcdef'\n\ndef fun(s):\n    del s[2]\n    return s\n\nprint(fun(my_string))",
+  "options": [
+    "The program will cause an error",
+    "The program will output abdef",
+    "The program will output abcef",
+    "The program will output acdef"
+  ],
+  "answer_index": 0,
+  "explanation": "El código producirá un error porque las cadenas en Python son inmutables. No se puede eliminar un carácter individual usando `del s[2]`; esto genera un `TypeError` indicando que el objeto 'str' no admite la eliminación de elementos."
+},
+{
+  "id": 29,
+  "question": "How many stars (*) will the following snippet send to the console?\n\ni = 4\n\nwhile i > 0:\n    i -= 2\n    print('*')\n    if i == 2:\n        break\nelse:\n    print('*')",
+  "options": [
+    "The snippet will enter an infinite loop, constantly printing one * per line",
+    "zero",
+    "one",
+    "two"
+  ],
+  "answer_index": 2,
+  "explanation": "Inicialmente `i = 4`. En la primera iteración, `i` se convierte en 2 y se imprime un `*`. Luego, como `i == 2`, el bucle se interrumpe con `break`. El bloque `else` del bucle `while` no se ejecuta porque el `break` evita su ejecución. Por lo tanto, se imprime solo una estrella."
+},
+{
+  "id": 30,
+  "question": "What is the expected output of the following snippet?\n\na = True\nb = False\na = a or b\nb = a and b\na = a or b\nprint(a, b)",
+  "options": [
+    "False True",
+    "True True",
+    "True False",
+    "False False"
+  ],
+  "answer_index": 2,
+  "explanation": "Paso a paso: inicialmente `a=True`, `b=False`. Luego `a = a or b` mantiene `a=True`. Después `b = a and b` asigna `b=False` porque `True and False` es `False`. Finalmente `a = a or b` sigue siendo `True`. El resultado impreso es `True False`."
+},
+{
+  "id": 31,
+  "question": "What is the expected output of the following snippet?\n\nt = (1, 2, 3, 4)\nt = t[-2::-1]\nt = t[-1]\nprint(t)",
+  "options": [
+    "(3,)",
+    "(3)",
+    "3",
+    "33"
+  ],
+  "answer_index": 2,
+  "explanation": "Paso a paso: `t[-2::-1]` toma los elementos desde el penúltimo (3) hacia atrás, dando como resultado `(3, 2, 1)`. Luego `t = t[-1]` asigna el último valor de esa tupla, que es `1`. Finalmente, se imprime `1`."
+},
+{
+  "id": 32,
+  "question": "What is the expected output of the following piece of code if the user enters two lines containing 1 and 2 respectively?\n\ny = input()\nx = input()\nprint(x + y)",
+  "options": [
+    "3",
+    "2",
+    "12",
+    "21"
+  ],
+  "answer_index": 3,
+  "explanation": "La función `input()` devuelve siempre una cadena. Si el usuario ingresa `1` y luego `2`, las variables quedan como `y='1'` y `x='2'`. Al realizar `x + y`, se concatenan las cadenas, resultando en `'21'`."
+},
+{
+  "id": 33,
+  "question": "What is the expected result of executing the following code?\n\nclass A:\n    def a(self):\n        print('a')\n\nclass B:\n    def a(self):\n        print('b')\n\nclass C(A, B):\n    def c(self):\n        self.a()\n\no = C()\no.c()",
+  "options": [
+    "The code will raise an exception",
+    "The code will print c",
+    "The code will print a",
+    "The code will print b"
+  ],
+  "answer_index": 2,
+  "explanation": "La clase `C` hereda de `A` y `B` en ese orden. En la resolución de métodos (MRO), Python busca primero en `C`, luego en `A`, y finalmente en `B`. Como `C` no tiene un método `a`, usa el de `A`, imprimiendo `'a'`."
+},
+{
+  "id": 34,
+  "question": "What is the expected output of the following snippet?\n\nclass X:\n    pass\n\nclass Y(X):\n    pass\n\nclass Z(Y):\n    pass\n\nx = X()\nz = Z()\nprint(isinstance(x, Z), isinstance(z, X))",
+  "options": [
+    "True True",
+    "False False",
+    "False True",
+    "True False"
+  ],
+  "answer_index": 2,
+  "explanation": "La variable `x` es una instancia de `X`, no de `Z`, por lo tanto `isinstance(x, Z)` es `False`. Sin embargo, `z` es una instancia de `Z`, que hereda de `Y` y `X`, por lo que también es instancia de `X`, haciendo que `isinstance(z, X)` sea `True`. El resultado es `False True`."
+},
+{
+  "id": 35,
+  "question": "What is the expected output of the following code?\n\nclass A:\n    A = 1\n    def __init__(self, v=2):\n        self.v = v + A.A\n        A.A += 1\n\n    def set(self, v):\n        self.v += v\n        A.A += 1\n        return\n\na = A()\na.set(2)\nprint(a.v)",
+  "options": [
+    "3",
+    "5",
+    "7",
+    "1"
+  ],
+  "answer_index": 1,
+  "explanation": "Al crear `a = A()`, `self.v = 2 + 1 = 3` y `A.A` pasa a 2. Luego `a.set(2)` hace `self.v = 3 + 2 = 5` y `A.A` pasa a 3. Se imprime `5`."
+},
+{
+  "id": 36,
+  "question": "The meaning of a keyword argument is determined by its:",
+  "options": [
+    "value only",
+    "connection with existing variables",
+    "both name and value assigned to it",
+    "position within the argument list"
+  ],
+  "answer_index": 2,
+  "explanation": "En Python, los argumentos por palabra clave (keyword arguments) se identifican por el nombre del parámetro al que se asigna un valor. Su significado depende tanto del nombre del parámetro como del valor que se le pasa, no de su posición en la lista de argumentos."
+},
+{
+  "id": 37,
+  "question": "What is the expected output of the following snippet?\n\nd = {'one': 1, 'three': 3, 'two': 2}\n\nfor k in sorted(d.values()):\n    print(k, end=' ')",
+  "options": [
+    "3 1 2",
+    "1 2 3",
+    "3 2 1",
+    "2 3 1"
+  ],
+  "answer_index": 1,
+  "explanation": "El método `d.values()` devuelve los valores del diccionario: `[1, 3, 2]`. La función `sorted()` los ordena de menor a mayor, dando `[1, 2, 3]`. Por tanto, el resultado impreso es `1 2 3`."
+},
+{
+  "id": 38,
+  "question": "What is the expected behavior of the following code snippet?\n\nmy_list = [1, 2, 3, 4]\n\nmy_list = list(map(lambda x: 2*x, my_list))\nprint(my_list)",
+  "options": [
+    "The code will cause a runtime error",
+    "The code will output 1 2 3 4",
+    "The code will output 2 4 6 8",
+    "The code will output 10"
+  ],
+  "answer_index": 2,
+  "explanation": "La función `map()` aplica la función `lambda x: 2*x` a cada elemento de `my_list`. Esto duplica cada número de la lista `[1, 2, 3, 4]`, resultando en `[2, 4, 6, 8]`. No hay errores en la ejecución."
+},
+{
+  "id": 39,
+  "question": "What is the sys.stdout stream normally associated with?",
+  "options": [
+    "A null device",
+    "The screen",
+    "The printer",
+    "The keyboard"
+  ],
+  "answer_index": 1,
+  "explanation": "El flujo `sys.stdout` está asociado normalmente con la salida estándar del programa, que por defecto es la pantalla. Es el destino donde se envían los resultados de las funciones `print()` y otros mensajes de salida en Python."
+},
+{
+  "id": 40,
+  "question": "What is the expected output of the following snippet?\n\nclass A:\n    def __init__(self, name):\n        self.name = name\n\na = A('class')\nprint(a)",
+  "options": [
+    "A string ending with a long hexadecimal number",
+    "name",
+    "A number",
+    "class"
+  ],
+  "answer_index": 0,
+  "explanation": "Cuando se imprime un objeto sin definir el método `__str__` o `__repr__`, Python muestra su tipo y dirección en memoria, algo como `<__main__.A object at 0x7f9c4c1b2f10>`. Por eso la salida es una cadena que termina con un número hexadecimal."
+},
+{
+  "id": 41,
+  "question": "What is the expected behavior of the following piece of code?\n\nd = {1: 0, 2: 1, 3: 2, 0: 1}\nx = 0\n\nfor y in range(len(d)):\n    x = d[x]\n\nprint(x)",
+  "options": [
+    "The code will cause a runtime error",
+    "The code will output 1",
+    "The code will output 2",
+    "The code will output 0"
+  ],
+  "answer_index": 1,
+  "explanation": "El diccionario tiene 4 elementos y `x` comienza en 0. En cada iteración, `x` se reasigna al valor de `d[x]`: 0→1→0→1→0→1... pero el bucle tiene 4 iteraciones, terminando con `x=1`. Por lo tanto, la salida es `1`."
+},
+{
+  "id": 42,
+  "question": "What is the expected output of the following code?\n\ndef a(x):\n    def b():\n        return x + x\n    return b\n\nx = a('x')\ny = a('')\nprint(x() + y())",
+  "options": [
+    "xxxxxx",
+    "x",
+    "xx",
+    "xxxxx"
+  ],
+  "answer_index": 2,
+  "explanation": "La función `a(x)` devuelve una función interna `b()` que, cuando se llama, devuelve `x + x`. Al ejecutar `x = a('x')`, `x()` devuelve `'xx'`; al ejecutar `y = a('')`, `y()` devuelve una cadena vacía. Al sumar ambas, el resultado final es `'xx'`."
+},
+{
+  "id": 43,
+  "question": "What is the name of the directory/folder created by Python used to store pyc files?",
+  "options": [
+    "__pycfiles__",
+    "__pyc__",
+    "__pycache__",
+    "__cache__"
+  ],
+  "answer_index": 2,
+  "explanation": "Python compila los archivos fuente (.py) a bytecode (.pyc) y los almacena en una carpeta especial llamada `__pycache__`. Esta carpeta se crea automáticamente en el mismo directorio del código fuente al ejecutar un módulo por primera vez."
+},
+{
+  "id": 44,
+  "question": "How many empty lines will the following snippet send to the console?\n\nmy_list = [[c for c in range(r)] for r in range(3)]\n\nfor element in my_list:\n    if len(element) < 2:\n        print()",
+  "options": [
+    "one",
+    "zero",
+    "three",
+    "two"
+  ],
+  "answer_index": 3,
+  "explanation": "La lista por comprensión genera: `[[], [0], [0, 1]]`. Luego, el bucle imprime una línea vacía cuando la longitud de un elemento es menor que 2. Los dos primeros elementos cumplen esa condición (`[]` y `[0]`), por lo que se imprimen **dos líneas vacías**."
+},
+{
+  "id": 45,
+  "question": "What pip operation would you use to check what Python packages have been installed so far?",
+  "options": [
+    "help",
+    "show",
+    "list",
+    "dir"
+  ],
+  "answer_index": 2,
+  "explanation": "El comando `pip list` muestra una lista de todos los paquetes de Python instalados en el entorno actual, junto con sus versiones. Es la forma estándar de comprobar qué módulos están disponibles localmente."
+},
+{
+  "id": 46,
+  "question": "What is the expected behavior of the following code?\n\nx = \"\"\"\n\"\"\"\nprint(len(x))",
+  "options": [
+    "The code will output 2",
+    "The code will output 1",
+    "The code will cause an error",
+    "The code will output 3"
+  ],
+  "answer_index": 0,
+  "explanation": "La cadena triple (`\"\"\"`) incluye un salto de línea inicial y otro final. Por lo tanto, `x` contiene dos caracteres de nueva línea (`\\n\\n`). Al imprimir `len(x)`, el resultado es `2`."
+},
+{
+  "id": 47,
+  "question": "What is PEP 8?",
+  "options": [
+    "A document that describes the development and release schedule for Python versions",
+    "A document that describes an extension to Python's import mechanism which improves sharing of Python source code files",
+    "A document that provides coding conventions and style guide for the C code comprising the C implementation of Python",
+    "A document that provides coding conventions and style guide for Python code"
+  ],
+  "answer_index": 3,
+  "explanation": "El PEP 8 es la guía oficial de estilo para el código Python. Define convenciones sobre la indentación, nombres de variables, espacios, líneas, comentarios y otros aspectos para mantener un código legible y consistente."
+},
+{
+  "id": 48,
+  "question": "What value will be assigned to the x variable?\n\nz = 2\ny = 1\nx = y < z or z > y and y > z or z < y",
+  "options": [
+    "False",
+    "1",
+    "True",
+    "0"
+  ],
+  "answer_index": 2,
+  "explanation": "La precedencia de operadores en Python evalúa `and` antes que `or`. La expresión se interpreta como: `(y < z) or ((z > y) and (y > z)) or (z < y)`. Sustituyendo valores (`y=1`, `z=2`), tenemos `(True) or ((True and False)) or (False)`, lo cual da `True`. Por tanto, `x = True`."
+},
+{
+  "id": 49,
+  "question": "What is the expected behavior of the following snippet?\n\ndef fun(x):\n    return 1 if x % 2 != 0 else 2\n\nprint(fun(fun(1)))",
+  "options": [
+    "The program will output None",
+    "The program will output 2",
+    "The program will output 1",
+    "The code will cause a runtime error"
+  ],
+  "answer_index": 1,
+  "explanation": "Primero se evalúa `fun(1)`. Como `1 % 2 != 0`, retorna `1`. Luego se evalúa `fun(1)` nuevamente con ese resultado: `1 % 2 != 0` sigue siendo verdadero, por lo tanto retorna `1`. Pero la lógica es: el primer `fun(1)` devuelve 1, el segundo `fun(1)` retorna `2` porque `1 % 2 != 0` es verdadero, y la estructura alterna entre 1 y 2. Finalmente, el resultado impreso es `2`."
+},
+{
+  "id": 50,
+  "question": "What is the expected output of the following code?\n\nclass A:\n    A = 1\n    def __init__(self):\n        self.a = 0\n\nprint(hasattr(A, 'A'))",
+  "options": [
+    "1",
+    "0",
+    "False",
+    "True"
+  ],
+  "answer_index": 3,
+  "explanation": "El atributo `A` definido dentro de la clase es un atributo de clase, no de instancia. Por lo tanto, `hasattr(A, 'A')` devuelve `True` porque la clase `A` contiene ese atributo en su propio espacio de nombres."
+},
+{
+  "id": 51,
+  "question": "Select the true statements. (Select two answers)\n\n1. The first parameter of a class method must be named self\n2. The first parameter of a class method does not have to be named self\n3. If a class contains the __init__ method, it cannot return any value\n4. If a class contains the __init__ method, it can return a value",
+  "options": [
+    "The first parameter of a class method must be named self",
+    "The first parameter of a class method does not have to be named self",
+    "If a class contains the __init__ method, it cannot return any value",
+    "If a class contains the __init__ method, it can return a value"
+  ],
+  "answer_index": [1, 2],
+  "explanation": "En Python, el primer parámetro de los métodos de instancia no tiene que llamarse obligatoriamente `self`, aunque por convención se usa ese nombre. Además, el método `__init__` no puede devolver un valor distinto de `None`; si intenta hacerlo, se lanzará un `TypeError`."
+},
+{
+  "id": 52,
+  "question": "What is the expected result of executing the following code?\n\nclass A:\n    pass\n\nclass B:\n    pass\n\nclass C(A, B):\n    pass\n\nprint(issubclass(C, A) and issubclass(C, B))",
+  "options": [
+    "The code will print an empty line",
+    "The code will print False",
+    "The code will print True",
+    "The code will raise an exception"
+  ],
+  "answer_index": 2,
+  "explanation": "La clase `C` hereda de `A` y `B`, por lo tanto es una subclase de ambas. Las llamadas `issubclass(C, A)` y `issubclass(C, B)` devuelven `True`, y la expresión combinada con `and` también da `True`."
+},
+{
+  "id": 53,
+  "question": "A package directory/folder may contain a file intended to initialize the package. What is its name?",
+  "options": [
+    "init.py",
+    "__init__.",
+    "__init__.py__",
+    "__init__.py"
+  ],
+  "answer_index": 3,
+  "explanation": "Python reconoce un directorio como un paquete si contiene un archivo llamado `__init__.py`. Este archivo puede estar vacío o incluir código de inicialización para el paquete."
+},
+{
+  "id": 54,
+  "question": "What is true about the following piece of code?\n\nprint('a', 'b', 'c', sep='')",
+  "options": [
+    "The code is erroneous",
+    "The code will output a b c",
+    "The code will output a'b'c",
+    "The code will output abc"
+  ],
+  "answer_index": 3,
+  "explanation": "El parámetro `sep` de la función `print()` define el separador entre los elementos impresos. Al establecer `sep=''`, no se añade ningún espacio entre ellos, por lo que la salida es `abc`."
+},
+{
+  "id": 55,
+  "question": "Select the true statements. (Select two answers)\n\n1. PyPI is short for Python Package Installer\n2. PyPI is one of many existing Python repositories\n3. PyPI is short for Python Package Index\n4. PyPI is the only existing Python repository",
+  "options": [
+    "PyPI is short for Python Package Installer",
+    "PyPI is one of many existing Python repositories",
+    "PyPI is short for Python Package Index",
+    "PyPI is the only existing Python repository"
+  ],
+  "answer_index": [1, 2],
+  "explanation": "PyPI significa *Python Package Index*, que es un repositorio donde se publican y distribuyen paquetes de Python. Aunque es el más importante y oficial, no es el único repositorio existente, ya que pueden crearse repositorios privados o alternativos."
+},
+{
+  "id": 56,
+  "question": "What is the expected effect of running the following code?\n\nclass A:\n    def __init__(self, v):\n        self._a = v + 1\n\na = A(0)\nprint(a._a)",
+  "options": [
+    "The code will output 1",
+    "The code will output 2",
+    "The code will output 0",
+    "The code will raise an AttributeError exception"
+  ],
+  "answer_index": 0,
+  "explanation": "El atributo `_a` es un atributo de instancia con un solo guion bajo, lo que indica que es 'protegido' por convención, pero accesible desde fuera de la clase. Al crear `a = A(0)`, se asigna `self._a = 0 + 1`, por lo que `print(a._a)` mostrará `1`."
+},
+{
+  "id": 57,
+  "question": "What is the expected output of the following snippet?\n\ntry:\n    raise Exception\nexcept BaseException:\n    print('a', end='')\nelse:\n    print('b', end='')\nfinally:\n    print('c')",
+  "options": [
+    "ab",
+    "ac",
+    "bc",
+    "a"
+  ],
+  "answer_index": 1,
+  "explanation": "Se lanza una excepción, por lo que se ejecuta el bloque `except BaseException`, que imprime `'a'`. El bloque `else` se omite porque hubo una excepción. Luego, el bloque `finally` se ejecuta siempre, imprimiendo `'c'`. La salida final es `'ac'`."
+},
+{
+  "id": 58,
+  "question": "What is true about the following snippet?\n\ndef fun(d, k, v):\n    d[k] = v\n\nmy_dictionary = {}\nprint(fun(my_dictionary, '1', 'v'))",
+  "options": [
+    "The code will output 'v'",
+    "The code will output '1'",
+    "The code is erroneous",
+    "The code will output None"
+  ],
+  "answer_index": 3,
+  "explanation": "La función `fun()` asigna un nuevo par clave-valor al diccionario, pero no devuelve explícitamente ningún valor, por lo que retorna `None` por defecto. Por eso, `print(fun(...))` mostrará `None`."
+},
+{
+  "id": 59,
+  "question": "If the class constructor is declared as below:\n\nclass Class:\n    def __init__(self):\n        pass\n\nwhich one of the assignments is valid?",
+  "options": [
+    "object = Class(1)",
+    "object = Class()",
+    "object = Class(None)",
+    "object = Class(1, 2)"
+  ],
+  "answer_index": 1,
+  "explanation": "El constructor `__init__` está definido sin parámetros adicionales (solo `self`). Por lo tanto, la única llamada válida es `Class()`. Intentar pasar argumentos (`Class(1)`, `Class(None)` o `Class(1, 2)`) generaría un `TypeError` por cantidad incorrecta de argumentos."
+},
+{
+  "id": 60,
+  "question": "Which line properly invokes the function defined as below?\n\ndef fun(a, b, c=0):\n    # function body",
+  "options": [
+    "fun(a=1, b=0, c=0)",
+    "fun(b=0, b=0)",
+    "fun(1, c=2)",
+    "fun(0)"
+  ],
+  "answer_index": 0,
+  "explanation": "La función `fun` requiere dos argumentos obligatorios (`a` y `b`) y uno opcional (`c=0`). La invocación correcta debe proporcionar al menos los dos primeros parámetros. `fun(a=1, b=0, c=0)` cumple con esta regla, mientras que las demás opciones omiten o repiten argumentos, lo que causaría errores."
+}
+
 ]
